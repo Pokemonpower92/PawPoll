@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Polls</title>
+</head>
+<body>
+    <h1>All Polls: </h1>
+    <ul>
+        <% for(const poll of polls) { %>
+            <li>
+                <h2>Author: <%= poll.author%></h2>
+                <h2>Question: </h2>
+                <p> <%= poll.question %> </p>
+                <h2>Answers: </h2>
+                <ul>
+                    <% for(let i = 0; i < poll.answers.length; i++) { %>
+                        <li>
+                            <p><%= poll.answers[i] %></p>
+                            <p>responses: <%= poll.results[i] %></p>
+                        </li>
+                    <% } %>
+                </ul>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>

@@ -4,11 +4,11 @@ const api = axios.create({
     baseURL: 'http://localhost:3000/api',
 })
 
-export const createPoll  = payload => api.post('/polls', payload);
+export const createPoll  = payload => api.post('/poll', payload);
 export const getPolls    = () => api.get('/polls');
-export const updatePoll  = (id, payload) => api.put(`/polls/${id}`, payload);
-export const getPollById = (id) => api.get(`/polls/${id}`);
-export const deletePoll  = (id) => api.delete(`/polls/${id}`);
+export const updatePoll  = (id, payload) => api.put(`/poll/${id}`, payload);
+export const getPollById = (id) => api.get(`/poll/${id}`);
+export const deletePoll  = (id) => api.delete(`/poll/${id}`);
 
 const apis = {
     createPoll,

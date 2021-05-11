@@ -1,8 +1,8 @@
 import {Component} from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
 import { Navbar } from '../components/';
-import { PollList, PollPage } from '../pages';
+import { PollList, PollPage, PollCreate, PollResults } from '../pages';
 
 
 class App extends Component{
@@ -13,10 +13,16 @@ class App extends Component{
           <Navbar />
           <Switch>
             <Route path="/polls/list" exact component={PollList} />
-            <Route path="/polls/:id" exact component={PollPage} />
+            <Route path="/poll/create" exact component={PollCreate} />
+            <Route path="/poll/:id" exact component={PollPage} />
+            <Route path="/poll/:id/results" exact component={PollResults} />
+            <Link to="/poll/create">
+              <button type="button">
+                Create a new Poll!
+              </button>
+            </Link>
           </Switch>
         </Router>
-        
       </div>
     )
   }

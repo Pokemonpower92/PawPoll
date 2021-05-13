@@ -1,4 +1,6 @@
 import { Component } from 'react';
+
+import PollPie from '../components/PollPie';
 import apis from '../api';
 
 class PollResults extends Component{
@@ -9,8 +11,10 @@ class PollResults extends Component{
         this.state = {
             id: tokens[2],
             poll: {},
-            loading: true
-        }
+            loading: true,
+        };
+
+        this.makeData = this.makeData.bind(this);
     }
 
     componentDidMount = async () => {
@@ -22,7 +26,31 @@ class PollResults extends Component{
         })
     }
 
+    makeData = () => {
+        let ret = {
+            totalVotes: 0,
+            votes: [],
+            arcs: [],
+        };
+
+        this.state.poll.answers.forEach((key, i) => {
+                ret.totalVotes += this.state.poll.results[i];
+                ret.votes.push(this.state.poll.results[i]);
+                ret.arcs.push(
+                    { 
+                        label: key,
+                        value: this.state.poll.results[i]
+                    }
+                );
+            }
+        );
+
+        return ret;
+    }
+
     render(){
+        
+
         if(this.state.loading){
             return null;
         } else {
@@ -47,6 +75,7 @@ class PollResults extends Component{
                             </div>
                         )
                     })}
+                    <PollPie pollData={this.makeData()} />
                 </div>
             )
         }

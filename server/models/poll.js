@@ -18,14 +18,10 @@ const pollSchema = new mongoose.Schema({
     },
     results: {
         type: [Number],
-    },
-    author: {
-        type: String,
-        default: "Anon"
     }
 })
 
-pollSchema.methods.initialize = function () {
+pollSchema.methods.addResults = function () {
     for(let i = 0; i < this.answers.length; i++){
         this.results.push(0);
     }

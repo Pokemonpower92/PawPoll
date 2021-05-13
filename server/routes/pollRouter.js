@@ -4,9 +4,9 @@ const router   = express.Router();
 
 
 router.get('/polls', pollCtrl.getPolls);
-router.get('/polls/:id', pollCtrl.getPollById);
-router.post('/polls/', pollCtrl.createPoll);
-router.put('/polls/:id', pollCtrl.updatePoll);
-router.delete('/polls/:id', pollCtrl.deletePoll);
+router.get('/poll/:id', pollCtrl.getPollById);
+router.post('/poll/', pollCtrl.createPoll);
+router.put('/poll/:id', pollCtrl.updatePoll);
+router.delete('/poll/:id', pollCtrl.deletePoll);
 
 module.exports = router;

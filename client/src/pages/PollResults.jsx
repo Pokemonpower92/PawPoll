@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import PollPie from '../components/PollPie';
+import { PollData } from '../components';
 import apis from '../api';
 
 class PollResults extends Component{
@@ -57,25 +57,7 @@ class PollResults extends Component{
             return(
                 <div className="PollResults">
                     <h1>{this.state.poll.question}</h1>
-                    {this.state.poll.answers.map(a => {
-                        return(
-                            <div 
-                                className="PollResults-answer"
-                            >
-                                <p>{a}</p>
-                            </div>
-                        )
-                    })}
-                    {this.state.poll.results.map(a => {
-                        return(
-                            <div 
-                                className="PollResults-answer"
-                            >
-                                <p>{a}</p>
-                            </div>
-                        )
-                    })}
-                    <PollPie pollData={this.makeData()} />
+                    <PollData pollData={this.makeData()} />
                 </div>
             )
         }

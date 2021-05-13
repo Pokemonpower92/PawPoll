@@ -21,6 +21,7 @@ createPoll = (req, res) => {
         })
     }
 
+    newPoll.addResults();
     newPoll
         .save()
         .then(() => {
@@ -55,7 +56,9 @@ updatePoll = async (req, res) => {
         })
     }
 
-    const poll = await Poll.findOne(id);
+    const poll = await Poll.findOne({ _id: id}).then().catch(err => {
+        console.log(err);
+    });
 
     if(!poll){
         return res.status(404).json({
@@ -66,7 +69,6 @@ updatePoll = async (req, res) => {
 
     poll.question = body.question;
     poll.answers  = body.answers;
-    poll.author   = body.author;
     poll.results  = body.results;
 
     poll
@@ -74,11 +76,12 @@ updatePoll = async (req, res) => {
     .then(() => {
         return res.status(201).json({
             success: true,
-            id: newPoll._id,
+            id: poll._id,
             message: "New poll created",
         })
     })
     .catch(err => {
+        console.log(err)
         return res.status(400).json({
             success: false,
             message: "New poll not created",

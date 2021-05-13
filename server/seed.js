@@ -17,11 +17,10 @@ const seed = new Poll({
         "Seed",
         "Seed",
         "Seed"
-    ],
-    author: "Seedy McSeedman"
+    ]
 })
 
-seed.initialize();
+seed.addResults();
 
 seed.save()
     .then( ret => {

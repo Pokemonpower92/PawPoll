@@ -7,13 +7,13 @@ export default function PollPie(props) {
 
     
     const width  = 300;
-    const height = 300;
+    const height = 350;
 
     useEffect(() => {
         const colorScale = d3     
             .scaleSequential()      
             .interpolator(d3.interpolateCool)      
-            .domain([0, pollData.arcs.length]);
+            .domain([0, pollData.data.length]);
 
         function drawChart() {
             d3.select('#pie-container')
@@ -40,7 +40,7 @@ export default function PollPie(props) {
     
             const arc = svg
                 .selectAll()
-                .data(pieGenerator(pollData.arcs))
+                .data(pieGenerator(pollData.data))
                 .enter();
             
             // Append arcs
@@ -55,8 +55,10 @@ export default function PollPie(props) {
                 .append('text')
                 .attr('text-anchor', 'middle')
                 .attr('alignment-baseline', 'middle')
-                .text((d) => d.data.label)
-                .style('fill', 'black')
+                .text((d) => {
+                    return d.data.label
+                })
+                .style('fill', 'white')
                 .attr('transform', (d) => {
                     const [x, y] = arcGenerator.centroid(d);
                     return `translate(${x}, ${y})`;
@@ -65,7 +67,7 @@ export default function PollPie(props) {
         };
 
         drawChart();
-    }, [pollData.arcs]);
+    }, [pollData.data]);
 
 
     return <div id="pie-container" />;

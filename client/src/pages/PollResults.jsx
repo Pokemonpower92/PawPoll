@@ -30,13 +30,13 @@ class PollResults extends Component{
         let ret = {
             totalVotes: 0,
             votes: [],
-            arcs: [],
+            data: [],
         };
 
         this.state.poll.answers.forEach((key, i) => {
                 ret.totalVotes += this.state.poll.results[i];
                 ret.votes.push(this.state.poll.results[i]);
-                ret.arcs.push(
+                ret.data.push(
                     { 
                         label: key,
                         value: this.state.poll.results[i]

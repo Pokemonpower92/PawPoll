@@ -1,0 +1,41 @@
+.PollHome{
+    margin-top: 2em;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    min-height: 20em;
+    padding: 10px;
+    text-align: center;
+
+    border: none;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: rgb(50, 50, 68);
+    color: white;
+}
+
+.PollHome-button {
+    height: 5em;
+    width: 15em;
+    border: none;
+    border-radius: 7px;
+    margin-top: auto;
+
+    font-size: larger;
+}
+
+.PollHome-button:hover {
+    height: 5em;
+    width: 15em;
+    border: none;
+    border-radius: 7px;
+    margin-top: auto;
+
+    background-color: rgb(110, 64, 170);
+    color: white;
+
+    font-size: larger;
+}

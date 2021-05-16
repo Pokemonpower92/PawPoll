@@ -4,5 +4,7 @@
     flex-wrap: wrap;
     background-color: rgb(50, 50, 68);
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }

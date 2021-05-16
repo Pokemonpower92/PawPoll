@@ -1,0 +1,13 @@
+.Navbar {
+    display: flex;
+    margin-top: -21px;
+    background-color: rgb(221, 221, 221);
+    height: 5em;
+    box-shadow: 0  5px 5px gray;
+}
+
+.Navbar-home {
+    align-self: flex-start;
+    margin-top: 40px;
+    margin-left: 10px;
+}

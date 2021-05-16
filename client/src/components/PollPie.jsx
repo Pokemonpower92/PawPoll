@@ -56,7 +56,7 @@ export default function PollPie(props) {
                 .attr('text-anchor', 'middle')
                 .attr('alignment-baseline', 'middle')
                 .text((d) => {
-                    return d.data.label
+                    return d.data.value === 0 ? "" : d.data.label;
                 })
                 .style('fill', 'white')
                 .attr('transform', (d) => {

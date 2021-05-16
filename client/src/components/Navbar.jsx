@@ -1,9 +1,12 @@
 import { Component } from 'react';
+import '../styles/Navbar.css';
 
 class Navbar extends Component{
     render(){
         return(
-            <h1>Navbar</h1>
+          <div className="Navbar">
+            <h1 className="Navbar-home">PawPoll</h1>
+          </div>
         )
     }
 }

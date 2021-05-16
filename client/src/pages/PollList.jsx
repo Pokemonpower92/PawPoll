@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import api from '../api';
+import '../styles/PollList.css';
 
 class PollList extends Component{
     constructor(props){

@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import apis from '../api';
+import '../styles/PollPage.css';
 
 class PollPage extends Component{
     

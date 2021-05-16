@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import { PollData } from '../components';
 import apis from '../api';
+import '../styles/PollResults.css';
 
 class PollResults extends Component{
     constructor(props){

@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import apis from '../api';
+import "../styles/PollCreate.css"
 
 class PollCreate extends Component{
     
@@ -74,7 +75,7 @@ class PollCreate extends Component{
     render(){
         return(
             <div className="PollCreate">
-                <form>
+                <form >
                     <input
                         type="text"
                         name="question"

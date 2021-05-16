@@ -1,6 +1,7 @@
 .PollData {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     background-color: rgb(50, 50, 68);
     border: none;
     border-radius: 5px;

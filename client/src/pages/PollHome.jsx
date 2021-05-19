@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import '../styles/PollHome.css';
 
 class PollHome extends Component{
-
     render(){
         return (
             <div className="PollHome">

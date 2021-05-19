@@ -1,4 +1,104 @@
 .PollCreate {
+    margin-top: 2em;
     margin-left: 2rem;
     margin-right: 2rem;
+    min-height: 20em;
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: rgb(50, 50, 68);
+    color: white;
+}
+
+.PollCreate-question {
+    height: 2em;
+    font-size: larger;
+    width: 99%;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 2px;
+    resize: vertical;
+}
+
+.PollCreate-question:focus {
+    outline-color: rgb(110, 64, 170);
+}
+
+.PollCreate-answer {
+    display: flex;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.PollCreate-answer-input {
+    height: 2em;
+    width: 75%;
+    border: none;
+    border-radius: 7px;
+
+    resize: vertical;
+}
+
+.PollCreate-answer-input:focus {
+    outline-color: rgb(110, 64, 170);
+}
+
+.PollCreate-answer-button-span {
+    margin-left: auto;
+    margin-right: 4px;
+}
+
+.PollCreate-answer-button-span button {
+    height: 1.5em;
+    width: 7em;
+    border: none;
+    border-radius: 7px;
+    font-size: larger;
+}
+
+.PollCreate-answer-button-span button:hover {
+    height: 1.5em;
+    width: 7em;
+    border: none;
+    border-radius: 7px;
+    margin-top: auto;
+
+    background-color: rgb(110, 64, 170);
+    color: white;
+
+    font-size: larger;
+}
+
+.PollCreate-form-buttons {
+    margin-top: auto;
+}
+
+.PollCreate-form-submit {
+    height: 2em;
+    width: 8em;
+    border: none;
+    border-radius: 7px;
+
+
+    font-size: larger;
+}
+
+.PollCreate-form-submit:hover {
+    height: 2em;
+    width: 8em;
+    border: none;
+    border-radius: 7px;
+    margin-top: auto;
+
+    background-color: rgb(110, 64, 170);
+    color: white;
+
+    font-size: larger;
 }

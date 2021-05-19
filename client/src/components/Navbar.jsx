@@ -4,9 +4,9 @@ import '../styles/Navbar.css';
 class Navbar extends Component{
     render(){
         return(
-          <div className="Navbar">
-            <h1 className="Navbar-home">PawPoll</h1>
-          </div>
+            <div className="Navbar">
+                <h1 className="Navbar-home">PawPoll</h1>
+            </div>
         )
     }
 }

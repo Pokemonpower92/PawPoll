@@ -80,7 +80,9 @@ class PollCreate extends Component{
                         type="text"
                         name="question"
                         value={this.state.question}
+                        placeholder="Enter your question"
                         onChange={this.handleQuestionChange}
+                        className="PollCreate-question"
                     />
                     {this.state.answers.map(function(ans, i) {
                         if(i !== this.state.answers.length - 1) {
@@ -90,30 +92,51 @@ class PollCreate extends Component{
                                         type="text"
                                         name={i}
                                         value={ans}
+                                        className="PollCreate-answer-input"
                                         onChange={this.handleAnswerChange.bind(this)}
                                     />
-                                    <button onClick={this.deleteAnswer.bind(this, i)}>Delete</button>
+                                    <span className="PollCreate-answer-button-span">
+                                        <button
+                                            classname="PollCreate-answer-button"
+                                            onClick={this.deleteAnswer.bind(this, i)}
+                                        >
+                                            Delete
+                                        </button>
+                                    </span>
                                 </div>
                             );
                         } else {
                             return(
                                 <div className="PollCreate-answer">
                                     <input
-                                    type="text"
-                                    name={i}
-                                    value={ans}
-                                    onClick={this.addAnswer}
-                                    onChange={this.handleAnswerChange.bind(this)}
+                                        type="text"
+                                        name={i}
+                                        value={ans}
+                                        className="PollCreate-answer-input"
+                                        onClick={this.addAnswer}
+                                        onChange={this.handleAnswerChange.bind(this)}
                                     />
-                                    <button onClick={this.deleteAnswer.bind(this, i)}>Delete</button>
+                                    <span className="PollCreate-answer-button-span">
+                                        <button
+                                            classname="PollCreate-answer-button"
+                                            onClick={this.deleteAnswer.bind(this, i)}
+                                        >
+                                            Delete
+                                        </button>
+                                    </span>
                                 </div>
                             );
                         }
                     }, this)}
-                    <div className="PollCreate-form-buttons">
-                        <button onClick={this.insertPoll}>Post poll!</button>
-                    </div>
                 </form>
+                <div className="PollCreate-form-buttons">
+                        <button 
+                            className="PollCreate-form-submit"
+                            onClick={this.insertPoll}
+                        >
+                            Post poll!
+                        </button>
+                    </div>
             </div>
         )
     }

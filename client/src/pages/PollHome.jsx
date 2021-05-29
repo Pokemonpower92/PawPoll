@@ -8,7 +8,7 @@ class PollHome extends Component{
             <div className="PollHome">
                 <div className="PollHome-message">
                     <p>
-                        PawPoll is a free, light-weight polling application
+                        PawPoll is a free, light-weight, polling application
                         that allows you to create and participate in polls that
                         asks the questions you're cuirious about.
                     </p>

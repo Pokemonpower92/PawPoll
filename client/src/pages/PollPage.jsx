@@ -46,18 +46,20 @@ class PollPage extends Component{
 
     render(){
         if(this.state.loading){
-            return <h1>get fucked boi</h1>
+            return <h1>This should never be rendered</h1>
         } else{ 
             return(
                 <div className="PollPage">
-                    <h1>{this.state.poll.question}</h1>
+                    <p className="PollPage-question">
+                        {this.state.poll.question}
+                    </p>
                     {this.state.poll.answers.map(function (a, i) {
                         return(
                             <div 
                                 className="PollPage-answer"
                                 onClick={this.handleSelectAnswer.bind(this, i)}
                             >
-                                <p>{a}</p>
+                                <p className="PollPage-answer-text">{a}</p>
                             </div>
                         )
                     }, this)}

@@ -1,4 +1,65 @@
 .PollPage {
+    margin-top: 2em;
     margin-left: 2rem;
     margin-right: 2rem;
+    min-height: 20em;
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(50, 50, 68);
+    color: white;
 }
+
+.PollPage-question {
+    height: 2em;
+    font-size: x-large;
+    width: 99%;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 2px;
+}
+
+.PollPage-answer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 2em;
+    font-size: larger;
+    width: 99%;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    resize: vertical;
+}
+
+.PollPage-answer-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+    color: black;
+}
+
+.PollPage-answer:hover {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 2em;
+    font-size: larger;
+    width: 99%;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    resize: vertical;
+
+    background-color: rgb(110, 64, 170);
+}
+
+.PollPage-answer:hover .PollPage-answer-text {
+    color: white;
+}
+

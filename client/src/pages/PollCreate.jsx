@@ -3,7 +3,7 @@ import apis from '../api';
 import "../styles/PollCreate.css"
 
 class PollCreate extends Component{
-    
+
 
     constructor(props) {
         super(props);
@@ -92,6 +92,7 @@ class PollCreate extends Component{
                                         type="text"
                                         name={i}
                                         value={ans}
+                                        placeholder={`Answer ${i+1}`}
                                         className="PollCreate-answer-input"
                                         onChange={this.handleAnswerChange.bind(this)}
                                     />
@@ -112,6 +113,7 @@ class PollCreate extends Component{
                                         type="text"
                                         name={i}
                                         value={ans}
+                                        placeholder={`Answer ${i+1}`}
                                         className="PollCreate-answer-input"
                                         onClick={this.addAnswer}
                                         onChange={this.handleAnswerChange.bind(this)}
@@ -130,7 +132,7 @@ class PollCreate extends Component{
                     }, this)}
                 </form>
                 <div className="PollCreate-form-buttons">
-                        <button 
+                        <button
                             className="PollCreate-form-submit"
                             onClick={this.insertPoll}
                         >

@@ -2,7 +2,7 @@ require("dotenv").config()
 const mongoose = require('mongoose');
 const { send } = require('process');
 
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         console.log("CONNECTION ESTABLISHED TO PAWPOLLDB");
     })

@@ -10,7 +10,7 @@ class PollHome extends Component{
                     <p>
                         PawPoll is a free, light-weight, polling application
                         that allows you to create and participate in polls that
-                        asks the questions you're cuirious about.
+                        asks the questions you're curious about.
                     </p>
                     <p>
                         Click the button below to create 
